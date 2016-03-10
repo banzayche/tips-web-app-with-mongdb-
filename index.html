@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Hello World</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
 </head>
 <body>
 	<div id="content"></div>
 	
-	
+	<script type="text/babel">
+		const CommentBox = React.createClass({
+		  getInitialState() {
+		  	return{
+		  		name: 'Vasya'
+		  	};
+		  },
+
+		  handleNameChange(e) {
+		  	this.setState({
+		  		name: e.target.value
+		  	});
+		  },
+
+		  render: function() {
+		    return (
+		    	<div>
+		      		<h1> Hello {this.state.name} !</h1>
+		      		<input type='text' value={this.state.name} onChange={this.handleNameChange}/>	    		
+		    	</div>
+		    );
+		  }
+		});
+		ReactDOM.render(
+		  <CommentBox name='Serhii' />,
+		  document.getElementById('content')
+		);
+    </script>
 </body>
 </html>
