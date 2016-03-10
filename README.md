@@ -5,3 +5,5 @@ programs:
 robomongo
 
 babel for translating ES6 code into ES5 !!!
+
+use webpack with React!
