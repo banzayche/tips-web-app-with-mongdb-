@@ -20,3 +20,8 @@ redux; e.t.c.
 jsx - javascript xml
 
 var testJSX = <h1> Welcome {function(){return 'JSX'}()} </h1>
+
+Flux:
+https://facebook.github.io/flux/
+
+Read about 'axios', 'keymirror', 'masonry', 'cors'
